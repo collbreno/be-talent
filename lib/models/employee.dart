@@ -1,3 +1,4 @@
+import 'package:betalent/utils/utils.dart';
 import 'package:equatable/equatable.dart';
 
 class Employee extends Equatable {
@@ -7,6 +8,12 @@ class Employee extends Equatable {
   final String phone;
   final String imageUrl;
   final DateTime admissionDate;
+
+  bool containsQuery(String query) {
+    return name.containsIgnoreCase(query) ||
+        job.containsIgnoreCase(query) ||
+        phone.containsIgnoreCase(query);
+  }
 
   Employee.fromJson(Map<String, dynamic> json)
       : id = json['id'],

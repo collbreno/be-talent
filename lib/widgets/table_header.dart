@@ -14,7 +14,7 @@ class TableHeader extends StatelessWidget {
       ),
       child: Row(
         children: [
-          const SizedBox(width: 16),
+          const SizedBox(width: 14),
           Text('FOTO', style: AppTypography.h2),
           const SizedBox(width: 24),
           Text('NOME', style: AppTypography.h2),
