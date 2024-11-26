@@ -2,8 +2,8 @@ import 'package:betalent/constants/app_colors.dart';
 import 'package:betalent/constants/app_typography.dart';
 import 'package:flutter/material.dart';
 
-class TableHeader extends StatelessWidget {
-  const TableHeader({super.key});
+class EmployeeTableHeader extends StatelessWidget {
+  const EmployeeTableHeader({super.key});
 
   @override
   Widget build(BuildContext context) {

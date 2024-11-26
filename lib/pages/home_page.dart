@@ -1,6 +1,6 @@
 import 'package:betalent/bloc/employees_cubit.dart';
 import 'package:betalent/widgets/app_search_bar.dart';
-import 'package:betalent/widgets/app_table.dart';
+import 'package:betalent/widgets/employee_table.dart';
 import 'package:betalent/widgets/async_data_builder.dart';
 import 'package:betalent/widgets/page_title.dart';
 import 'package:flutter/material.dart';
@@ -15,8 +15,7 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Home'),
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
+      body: ListView(
         children: [
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 18),
@@ -31,21 +30,20 @@ class HomePage extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 24),
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: BlocBuilder<EmployeesCubit, EmployeesState>(
-                builder: (context, state) {
-                  return AsyncDataBuilder(
-                    state: state.result,
-                    builder: (context, _) {
-                      return AppTable(state.filtered!);
-                    },
-                  );
-                },
-              ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: BlocBuilder<EmployeesCubit, EmployeesState>(
+              builder: (context, state) {
+                return AsyncDataBuilder(
+                  state: state.result,
+                  builder: (context, _) {
+                    return EmployeeTable(state.filtered!);
+                  },
+                );
+              },
             ),
           ),
+          const SizedBox(height: 70),
         ],
       ),
     );

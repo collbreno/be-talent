@@ -5,15 +5,15 @@ import 'package:betalent/utils/utils.dart';
 import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/material.dart';
 
-class EmployeeTile extends StatefulWidget {
+class EmployeeTableRow extends StatefulWidget {
   final Employee employee;
-  const EmployeeTile(this.employee, {super.key});
+  const EmployeeTableRow(this.employee, {super.key});
 
   @override
-  State<EmployeeTile> createState() => _EmployeeTileState();
+  State<EmployeeTableRow> createState() => _EmployeeTableRowState();
 }
 
-class _EmployeeTileState extends State<EmployeeTile> {
+class _EmployeeTableRowState extends State<EmployeeTableRow> {
   late bool _isExpanded;
 
   @override
