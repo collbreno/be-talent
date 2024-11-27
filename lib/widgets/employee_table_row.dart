@@ -1,6 +1,7 @@
 import 'package:betalent/constants/app_colors.dart';
 import 'package:betalent/constants/app_typography.dart';
 import 'package:betalent/models/employee.dart';
+import 'package:betalent/utils/formatters.dart';
 import 'package:betalent/utils/utils.dart';
 import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/material.dart';
@@ -44,12 +45,20 @@ class _EmployeeTableRowState extends State<EmployeeTableRow> {
     return Column(
       children: [
         const SizedBox(height: 18),
-        _buildContentLine('Cargo', widget.employee.job),
+        _buildContentLine(
+          'Cargo',
+          widget.employee.job,
+        ),
         const SizedBox(height: 14),
         _buildContentLine(
-            'Data de admissão', widget.employee.admissionDate.formatDMY()),
+          'Data de admissão',
+          widget.employee.admissionDate.formatDMY(),
+        ),
         const SizedBox(height: 14),
-        _buildContentLine('Telefone', widget.employee.phone),
+        _buildContentLine(
+          'Telefone',
+          Formatters.phone.maskText(widget.employee.phone),
+        ),
         const SizedBox(height: 30),
       ],
     );

@@ -1,4 +1,5 @@
 import 'package:betalent/bloc/employees_cubit.dart';
+import 'package:betalent/widgets/app_header.dart';
 import 'package:betalent/widgets/app_search_bar.dart';
 import 'package:betalent/widgets/employee_table.dart';
 import 'package:betalent/widgets/async_data_builder.dart';
@@ -12,9 +13,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Home'),
-      ),
+      appBar: const AppHeader(),
       body: ListView(
         children: [
           const Padding(
