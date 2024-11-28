@@ -1,6 +1,6 @@
 import 'package:betalent/models/employee.dart';
 import 'package:betalent/repository/i_app_repository.dart';
-import 'package:betalent/utils/async_data.dart';
+import 'package:betalent/models/async_data.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

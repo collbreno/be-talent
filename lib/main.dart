@@ -1,4 +1,5 @@
 import 'package:betalent/bloc/employees_cubit.dart';
+import 'package:betalent/constants/app_colors.dart';
 import 'package:betalent/pages/home_page.dart';
 import 'package:betalent/repository/app_repository.dart';
 import 'package:betalent/repository/i_app_repository.dart';
@@ -19,9 +20,10 @@ class App extends StatelessWidget {
     return RepositoryProvider<IAppRepository>.value(
       value: repository,
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'BeTalent',
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          colorScheme: ColorScheme.fromSeed(seedColor: AppColors.bluePrimary),
           useMaterial3: true,
         ),
         home: BlocProvider(

@@ -1,4 +1,4 @@
-import 'package:betalent/utils/utils.dart';
+import 'package:betalent/utils/extensions.dart';
 import 'package:equatable/equatable.dart';
 
 class Employee extends Equatable {

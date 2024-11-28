@@ -2,7 +2,7 @@ import 'package:betalent/constants/app_colors.dart';
 import 'package:betalent/constants/app_typography.dart';
 import 'package:betalent/models/employee.dart';
 import 'package:betalent/utils/formatters.dart';
-import 'package:betalent/utils/utils.dart';
+import 'package:betalent/utils/extensions.dart';
 import 'package:betalent/widgets/text_row.dart';
 import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/material.dart';

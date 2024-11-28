@@ -1,4 +1,4 @@
-import 'package:betalent/utils/async_data.dart';
+import 'package:betalent/models/async_data.dart';
 import 'package:flutter/material.dart';
 
 class AsyncDataBuilder<T> extends StatelessWidget {
