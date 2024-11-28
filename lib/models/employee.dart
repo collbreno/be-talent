@@ -2,7 +2,7 @@ import 'package:betalent/utils/utils.dart';
 import 'package:equatable/equatable.dart';
 
 class Employee extends Equatable {
-  final int id;
+  final String id;
   final String name;
   final String job;
   final String phone;

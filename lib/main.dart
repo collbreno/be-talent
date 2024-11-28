@@ -2,11 +2,12 @@ import 'package:betalent/bloc/employees_cubit.dart';
 import 'package:betalent/pages/home_page.dart';
 import 'package:betalent/repository/app_repository.dart';
 import 'package:betalent/repository/i_app_repository.dart';
+import 'package:betalent/utils/api_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() {
-  runApp(App(AppRepository()));
+  runApp(App(AppRepository(ApiUtils.dio)));
 }
 
 class App extends StatelessWidget {

@@ -21,12 +21,14 @@ dependencies:
   dotted_line: ^3.2.3
   mask_text_input_formatter: ^2.9.0
   flutter_svg: ^2.0.15
+  dio: ^5.7.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   flutter_lints: ^3.0.0
+  http_mock_adapter: ^0.6.1
 
 flutter:
 
