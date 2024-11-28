@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 class EmployeeTableHeader extends StatelessWidget {
   const EmployeeTableHeader({super.key});
 
+  static const _dotSize = 8.0;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -23,11 +25,11 @@ class EmployeeTableHeader extends StatelessWidget {
             child: Container(),
           ),
           Container(
-            height: 8,
-            width: 8,
+            height: _dotSize,
+            width: _dotSize,
             decoration: BoxDecoration(
               color: AppColors.black,
-              borderRadius: BorderRadius.circular(8),
+              borderRadius: BorderRadius.circular(_dotSize),
             ),
           ),
           const SizedBox(width: 28),

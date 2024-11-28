@@ -1,7 +1,7 @@
 import 'package:betalent/bloc/employees_cubit.dart';
 import 'package:betalent/widgets/app_header.dart';
 import 'package:betalent/widgets/app_search_bar.dart';
-import 'package:betalent/widgets/employee_table.dart';
+import 'package:betalent/widgets/employee_table/employee_table.dart';
 import 'package:betalent/widgets/async_data_builder.dart';
 import 'package:betalent/widgets/page_title.dart';
 import 'package:flutter/material.dart';

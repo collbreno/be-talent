@@ -46,7 +46,7 @@ class _AppSearchBarState extends State<AppSearchBar> {
       trailing: [
         if (_controller.text.isNotEmpty)
           IconButton(
-            icon: Icon(Icons.close),
+            icon: const Icon(Icons.close),
             onPressed: () {
               setState(() {
                 _controller.clear();

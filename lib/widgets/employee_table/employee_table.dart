@@ -1,7 +1,7 @@
 import 'package:betalent/constants/app_colors.dart';
 import 'package:betalent/models/employee.dart';
-import 'package:betalent/widgets/employee_table_row.dart';
-import 'package:betalent/widgets/employee_table_header.dart';
+import 'package:betalent/widgets/employee_table/employee_table_row.dart';
+import 'package:betalent/widgets/employee_table/employee_table_header.dart';
 import 'package:flutter/material.dart';
 
 class EmployeeTable extends StatelessWidget {
