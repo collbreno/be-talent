@@ -3,6 +3,7 @@ import 'package:betalent/constants/app_typography.dart';
 import 'package:betalent/models/employee.dart';
 import 'package:betalent/utils/formatters.dart';
 import 'package:betalent/utils/utils.dart';
+import 'package:betalent/widgets/text_row.dart';
 import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/material.dart';
 
@@ -45,50 +46,24 @@ class _EmployeeTableRowState extends State<EmployeeTableRow> {
     return Column(
       children: [
         const SizedBox(height: 18),
-        _buildContentLine(
-          'Cargo',
-          widget.employee.job,
+        TextRow(
+          label: 'Cargo',
+          value: widget.employee.job,
         ),
+        DottedLine(dashColor: AppColors.gray10),
         const SizedBox(height: 14),
-        _buildContentLine(
-          'Data de admissão',
-          widget.employee.admissionDate.formatDMY(),
+        TextRow(
+          label: 'Data de admissão',
+          value: widget.employee.admissionDate.formatDMY(),
         ),
+        DottedLine(dashColor: AppColors.gray10),
         const SizedBox(height: 14),
-        _buildContentLine(
-          'Telefone',
-          Formatters.phone.maskText(widget.employee.phone),
+        TextRow(
+          label: 'Telefone',
+          value: Formatters.phone.maskText(widget.employee.phone),
         ),
+        DottedLine(dashColor: AppColors.gray10),
         const SizedBox(height: 30),
-      ],
-    );
-  }
-
-  Widget _buildContentLine(String label, String value) {
-    return Column(
-      children: [
-        Row(
-          children: [
-            Text(
-              label,
-              style: AppTypography.h2,
-            ),
-            const SizedBox(width: 8),
-            Expanded(
-              child: FittedBox(
-                fit: BoxFit.scaleDown,
-                alignment: Alignment.centerRight,
-                child: Text(
-                  value,
-                  style: AppTypography.h3,
-                ),
-              ),
-            ),
-          ],
-        ),
-        DottedLine(
-          dashColor: AppColors.gray10,
-        ),
       ],
     );
   }
